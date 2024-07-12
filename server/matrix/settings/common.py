@@ -13,19 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-_^xfg%3vuk5cplolr*o-b1zijhy971c2%=jk%ztu9)hl$%ina9"
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Application definition
@@ -37,7 +25,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "debug_toolbar"
+    "debug_toolbar",
+    "menu",
 ]
 
 MIDDLEWARE = [
@@ -77,18 +66,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "matrix.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "menuMatrix",
-        "HOST": "localhost",
-        "USER": "root",
-        "PASSWORD": "SiegirlRootpw213",
-    }
-}
 
 
 # Password validation
